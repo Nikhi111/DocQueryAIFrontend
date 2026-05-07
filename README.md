@@ -1,18 +1,166 @@
-# React + Vite
+# DocQueryAIFrontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An AI-powered document assistant frontend built with **React + Vite** that allows users to upload documents, chat with AI, and get intelligent answers from PDFs, research papers, contracts, and other resources.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* 📄 Upload PDF and document resources
+* 🤖 AI-powered document question answering
+* 💬 Real-time chat interface
+* 📚 Sidebar for managing uploaded resources
+* 🔐 Authentication system
+* ☁️ Cloudinary file upload integration
+* ✨ Modern animated UI with React
+* ⚡ Fast frontend powered by Vite
+* 📱 Responsive design
 
-## React Compiler
+---
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+# 🛠️ Tech Stack
 
-Note: This will impact Vite dev & build performances.
+## Frontend
 
-## Expanding the ESLint configuration
+* React.js
+* Vite
+* Axios
+* Tailwind CSS
+* Framer Motion
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## APIs & Services
+
+* FastAPI Backend
+* Cloudinary
+* REST APIs
+
+---
+
+# 📂 Project Structure
+
+```bash
+src/
+│
+├── api/
+│   ├── authService.js
+│   ├── axios.js
+│   ├── chatService.js
+│   └── documentService.js
+│
+├── assets/
+│
+├── component/
+│   ├── chat/
+│   ├── sidebar/
+│   └── upload/
+│
+├── pages/
+│   ├── Dashboard.jsx
+│   ├── HomePage.jsx
+│   ├── RegisterPage.jsx
+│   └── loginPage.jsx
+│
+├── utils/
+│   └── uploadToCloudinary.js
+│
+├── App.jsx
+├── main.jsx
+└── index.css
+```
+
+---
+
+# ⚙️ Installation
+
+## 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/Nikhi111/DocQueryAIFrontend.git
+```
+
+## 2️⃣ Navigate into the project
+
+```bash
+cd DocQueryAIFrontend
+```
+
+## 3️⃣ Install dependencies
+
+```bash
+npm install
+```
+
+## 4️⃣ Start the development server
+
+```bash
+npm run dev
+```
+
+---
+
+# 🔑 Environment Variables
+
+Create a `.env` file inside the `src` directory.
+
+```env
+VITE_API_BASE_URL=your_backend_url
+VITE_CLOUDINARY_CLOUD_NAME=your_cloud_name
+VITE_CLOUDINARY_UPLOAD_PRESET=your_upload_preset
+```
+
+---
+
+# 📸 Screenshots
+
+Add your application screenshots here.
+
+```bash
+/assets/screenshots
+```
+
+---
+
+# 🔗 Backend Repository
+
+Backend repository:
+
+```bash
+https://github.com/Nikhi111/DocQueryAI
+```
+
+---
+
+# ✨ Future Improvements
+
+* Streaming AI responses
+* Multi-document chat
+* Voice interaction
+* Markdown rendering
+* Chat history persistence
+* Drag and drop uploads
+* Authentication with JWT
+* Dark/Light theme toggle
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome.
+
+1. Fork the repository
+2. Create a new branch
+3. Commit your changes
+4. Push to the branch
+5. Open a Pull Request
+
+---
+
+# 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+# 👨‍💻 Author
+
+**Nikhil Shinde**
+
+* GitHub: [https://github.com/Nikhi111](https://github.com/Nikhi111)
