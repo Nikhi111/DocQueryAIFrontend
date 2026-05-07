@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+
+
+@layer base {
+  /* Custom scrollbar for the entire app */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(15, 23, 42, 0.3);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(34, 211, 238, 0.4);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(34, 211, 238, 0.6);
+  }
+}
+
+@layer components {
+  /* Glassmorphism effect */
+  .glass {
+    @apply backdrop-blur-xl bg-white/10 border border-white/20;
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent;
+  }
+
+  /* Glow effect button */
+  .glow-button {
+    @apply relative px-6 py-3 rounded-lg font-semibold text-white bg-gradient-to-r from-cyan-500 to-purple-500 transition-all hover:shadow-lg hover:shadow-cyan-500/50;
+  }
+
+  /* Animated gradient button */
+  .gradient-button {
+    @apply relative overflow-hidden px-8 py-3 rounded-lg font-semibold text-white;
+    background: linear-gradient(90deg, #06b6d4, #a855f7);
+    transition: all 0.3s ease;
+  }
+
+  .gradient-button:hover {
+    @apply shadow-lg;
+    box-shadow: 0 0 30px rgba(34, 211, 238, 0.5);
+  }
+
+  /* Card with glow on hover */
+  .glow-card {
+    @apply relative rounded-2xl bg-slate-900/40 backdrop-blur-sm border border-cyan-500/10 transition-all;
+  }
+
+  .glow-card:hover {
+    @apply border-cyan-500/30 shadow-lg;
+    box-shadow: 0 0 20px rgba(34, 211, 238, 0.2);
+  }
+
+  /* Input styling */
+  .glow-input {
+    @apply w-full px-4 py-3 bg-slate-800/50 border border-cyan-500/20 rounded-lg text-white placeholder-gray-500 focus:outline-none transition-all focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20;
+  }
+}
+
+/* Global animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(34, 211, 238, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(168, 85, 247, 0.7);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+/* Cursor effect */
+html {
+  cursor: default;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+}
+
+/* Prevent layout shift on scrollbar appearance */
+html {
+  overflow-y: scroll;
+}
